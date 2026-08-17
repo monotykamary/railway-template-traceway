@@ -14,8 +14,8 @@ assert.doesNotMatch(allText, /traceway:(?:latest|sqlite)(?:\s|`|@|$)/);
 assert.match(readme, /Keep the service at one replica/i);
 assert.match(readme, /browser-based synthetic checks are unavailable/i);
 assert.match(readme, /register the first account/i);
-assert.match(readme, /`PORT` | `8082`/);
-assert.match(readme, /`PORTS` | `8082`/);
+assert.ok(readme.includes("| `PORT` | `8082` |"));
+assert.ok(readme.includes("| `PORTS` | `8082` |"));
 assert.match(marketplace, /HTTPS on port 8082/);
 
 for (const section of [
