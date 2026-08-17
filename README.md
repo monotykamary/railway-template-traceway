@@ -9,7 +9,7 @@ The Deploy on Railway button is added only after the published route is rendered
 - One Traceway service using `ghcr.io/tracewayapp/traceway:v1.9.11-sqlite`
 - Immutable image index digest `sha256:b4ac5bd8eb63a31887a31a0fe79579fc750e74c29067dd73991c8e38d86413b3`
 - A persistent Railway volume mounted at `/data` with daily backups
-- Railway-managed HTTPS and a `/health` deployment check
+- Railway-managed HTTPS on port 8082 and a `/health` deployment check
 
 The SQLite image is first-party, supports `linux/amd64` and `linux/arm64`, and needs no external database.
 
@@ -37,7 +37,8 @@ Set the standard exporter headers to `Authorization=Bearer <project-token>`.
 | --- | --- | --- |
 | `JWT_SECRET` | Generated | Signs user sessions; keep stable. |
 | `APP_BASE_URL` | Generated public HTTPS URL | Builds links in notifications and password-reset email. |
-| `PORTS` | `80` | Keeps the application on the template's public port. |
+| `PORT` | `8082` | Selects the port used by Railway networking and health checks. |
+| `PORTS` | `8082` | Binds Traceway to the same public and health-check port. |
 | `SQLITE_RETENTION_DAYS` | `30` | Retains telemetry rows for 30 days; `0` disables pruning. |
 | `SESSION_RECORDING_RETENTION_DAYS` | `30` | Retains local session recordings for 30 days; `0` disables pruning. |
 
