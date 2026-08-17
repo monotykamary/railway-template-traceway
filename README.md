@@ -2,7 +2,7 @@
 
 Deploy [Traceway](https://tracewayapp.com), an OpenTelemetry-native observability platform, on Railway with durable single-node storage.
 
-The Deploy on Railway button is added only after the published route is rendered and verified.
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/traceway?referralCode=ZqgrJ0)
 
 ## What this template deploys
 
