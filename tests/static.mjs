@@ -8,8 +8,8 @@ const notices = readFileSync("THIRD_PARTY_NOTICES.md", "utf8");
 const icon = readFileSync("assets/traceway-icon.png");
 const allText = `${readme}\n${marketplace}\n${notices}`;
 
-assert.match(readme, /ghcr\.io\/tracewayapp\/traceway:v1\.9\.11-sqlite/);
-assert.match(readme, /sha256:b4ac5bd8eb63a31887a31a0fe79579fc750e74c29067dd73991c8e38d86413b3/);
+assert.match(readme, /ghcr\.io\/tracewayapp\/traceway:v1\.9\.19-sqlite/);
+assert.match(readme, /sha256:b5a3f587803e58deab447cd6637c22f8e5f493a329d9aaebf9adf0a6d916d54d/);
 assert.doesNotMatch(allText, /traceway:(?:latest|sqlite)(?:\s|`|@|$)/);
 assert.match(readme, /Keep the service at one replica/i);
 assert.match(readme, /browser-based synthetic checks are unavailable/i);
@@ -36,7 +36,7 @@ assert.equal(
   createHash("sha256").update(icon).digest("hex"),
   "e7fed5fb6a53da3245ede2ec2e814abc9f9efbaab140fb4558821dea20bc162b",
 );
-assert.match(notices, /59f3d528dbda9fdb46f9cb309669f4922b44324b/);
+assert.match(notices, /b57ba01630bb68947fb2515b484d39015eb0693c/);
 
 const deployLinks = [...readme.matchAll(/https:\/\/railway\.com\/deploy\/([^)?\s]+)\?referralCode=ZqgrJ0/g)];
 assert.ok(deployLinks.length <= 1, "README must contain at most one deploy button");

@@ -6,8 +6,8 @@ Deploy [Traceway](https://tracewayapp.com), an OpenTelemetry-native observabilit
 
 ## What this template deploys
 
-- One Traceway service using `ghcr.io/tracewayapp/traceway:v1.9.11-sqlite`
-- Immutable image index digest `sha256:b4ac5bd8eb63a31887a31a0fe79579fc750e74c29067dd73991c8e38d86413b3`
+- One Traceway service using `ghcr.io/tracewayapp/traceway:v1.9.19-sqlite`
+- Immutable image index digest `sha256:b5a3f587803e58deab447cd6637c22f8e5f493a329d9aaebf9adf0a6d916d54d`
 - A persistent Railway volume mounted at `/data` with daily backups
 - Railway-managed HTTPS on port 8082 and a `/health` deployment check
 
@@ -55,7 +55,7 @@ Redeployments and deliberate image upgrades retain the volume. Back up before ch
 - This is Traceway's supported SQLite variant for a simple, modest-ingest, single-node deployment. High-volume installations should follow upstream's PostgreSQL and ClickHouse architecture instead.
 - Keep the service at one replica. SQLite and the attached volume are not a horizontally shared datastore.
 - The SQLite image does not include Chromium, so browser-based synthetic checks are unavailable. HTTP synthetic checks and the core logs, traces, metrics, replay, exceptions, and alerting paths remain available.
-- Version `v1.9.11` is pinned because it is the newest release whose complete upstream container-release workflow succeeded during validation. Releases `v1.9.12` through `v1.9.14` did not produce a complete signed image set; do not switch to a moving tag such as `sqlite` or `latest`.
+- Version `v1.9.19` is pinned because its complete upstream container-release workflow succeeded and published the SQLite image. Earlier `v1.9.12` through `v1.9.14` releases had incomplete image sets; do not switch to a moving tag such as `sqlite` or `latest`.
 
 ## Updating
 
@@ -66,8 +66,8 @@ Redeployments and deliberate image upgrades retain the volume. Back up before ch
 
 ## Upstream
 
-- Source: https://github.com/tracewayapp/traceway/tree/backend/v1.9.11
-- Release: https://github.com/tracewayapp/traceway/releases/tag/backend/v1.9.11
+- Source: https://github.com/tracewayapp/traceway/tree/backend/v1.9.19
+- Release: https://github.com/tracewayapp/traceway/releases/tag/backend/v1.9.19
 - Documentation: https://docs.tracewayapp.com
 - License: MIT
 
