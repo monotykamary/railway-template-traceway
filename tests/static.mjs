@@ -8,8 +8,8 @@ const notices = readFileSync("THIRD_PARTY_NOTICES.md", "utf8");
 const icon = readFileSync("assets/traceway-icon.png");
 const allText = `${readme}\n${marketplace}\n${notices}`;
 
-assert.match(readme, /ghcr\.io\/tracewayapp\/traceway:v1\.9\.19-sqlite/);
-assert.match(readme, /sha256:b5a3f587803e58deab447cd6637c22f8e5f493a329d9aaebf9adf0a6d916d54d/);
+assert.match(readme, /ghcr\.io\/tracewayapp\/traceway:v1.19.23-sqlite/);
+assert.match(readme, /sha256:30b6c20f6017bda1ff481cd28043487326ef988c227d80046123aa7c7a42f847/);
 assert.doesNotMatch(allText, /traceway:(?:latest|sqlite)(?:\s|`|@|$)/);
 assert.match(readme, /Keep the service at one replica/i);
 assert.match(readme, /browser-based synthetic checks are unavailable/i);

@@ -7,7 +7,7 @@ Deploy [Traceway](https://tracewayapp.com), an OpenTelemetry-native observabilit
 ## What this template deploys
 
 - One Traceway service using `ghcr.io/tracewayapp/traceway:v1.19.23-sqlite`
-- Immutable image index digest `sha256:b5a3f587803e58deab447cd6637c22f8e5f493a329d9aaebf9adf0a6d916d54d`
+- Immutable image index digest `sha256:30b6c20f6017bda1ff481cd28043487326ef988c227d80046123aa7c7a42f847`
 - A persistent Railway volume mounted at `/data` with daily backups
 - Railway-managed HTTPS on port 8082 and a `/health` deployment check
 
