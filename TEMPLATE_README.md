@@ -2,7 +2,7 @@
 
 ## About Hosting Traceway
 
-Traceway is an OpenTelemetry-native observability platform for logs, traces, metrics, session replay, exceptions, AI tracing, and on-call alerting. This template deploys the first-party `v2.0.3-sqlite` image as a durable, single-node Railway service.
+Traceway is an OpenTelemetry-native observability platform for logs, traces, metrics, session replay, exceptions, AI tracing, and on-call alerting. This template deploys the first-party `v2.0.5-sqlite` image as a durable, single-node Railway service.
 
 Open the generated public domain and register the first account. That account becomes the owner of the self-hosted organization; later users should be invited from inside Traceway.
 
